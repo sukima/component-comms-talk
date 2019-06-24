@@ -1,0 +1,10 @@
+{{yield (hash
+  maxFontSize=this.maxFontSize
+  register=(action "registerBigNumber")
+  unregister=(action "unregisterBigNumber")
+  big-number=(component "big-number"
+    fontSize=this.maxFontSize
+    styleManagerRegister=(action "registerBigNumber")
+    styleManagerUnregister=(action "unregisterBigNumber")
+  )
+)}}

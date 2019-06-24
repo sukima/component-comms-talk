@@ -1,0 +1,16 @@
+<h1>Data Fetching</h1>
+
+{{! BEGIN-SNIPPET data-fetching }}
+<FetchDataManager @url="/api/examples/data-fetching" as |manager value|>
+  {{#if manager.isLoading}}
+    <p>Fetching data&hellip;</p>
+  {{else if manager.error}}
+    <p>Failed: {{manager.error}}</p>
+  {{else}}
+    <p>{{value.message}}</p>
+  {{/if}}
+  <button {{action manager.refresh}}>Refresh Data</button>
+</FetchDataManager>
+{{! END-SNIPPET }}
+
+<CodeSnippet @name="data-fetching.hbs" />

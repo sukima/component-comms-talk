@@ -3,6 +3,7 @@
 module.exports = function(environment) {
   let ENV = {
     modulePrefix: 'component-comms-talk',
+    podModulePrefix: 'component-comms-talk/pods',
     environment,
     rootURL: '/',
     locationType: 'auto',

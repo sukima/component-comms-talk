@@ -1,0 +1,14 @@
+{{yield (hash
+  state=this.state
+  isAllSelected=this.isAllSelected
+  isNoneSelected=this.isNoneSelected
+  isSomeSelected=this.isSomeSelected
+  selected=this.selected
+  check=(component "item-selector/check" selected=this.selected)
+  select=(action "addOption")
+  unselect=(action "removeOption")
+  toggle=(action "toggleOption")
+  selectAll=(action "addAll")
+  unselectAll=(action "removeAll")
+  toggleAll=(action "toggleAllOrNone")
+)}}

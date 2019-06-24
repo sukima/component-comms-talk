@@ -1,0 +1,17 @@
+{{#if this.isOpen}}
+  <div class="basic-modal">
+    <div class="basic-modal-dialog">
+      {{yield (hash
+        header=(component "basic-modal/section" class="basic-modal-header")
+        content=(component "basic-modal/section" class="basic-modal-content")
+        footer=(component "basic-modal/section" class="basic-modal-footer")
+        resolve=(action "resolve")
+      )}}
+    </div>
+    <div
+      class="basic-modal-overlay"
+      role="button"
+      {{action "resolve" "cancel"}}
+    ></div>
+  </div>
+{{/if}}

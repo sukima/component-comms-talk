@@ -21,7 +21,9 @@
     "@ember/jquery": "^0.5.2",
     "@ember/optional-features": "^0.6.3",
     "broccoli-asset-rev": "^2.7.0",
+    "confirmed": "^2.3.0",
     "ember-ajax": "^5.0.0",
+    "ember-auto-import": "^1.3.0",
     "ember-cli": "~3.9.0",
     "ember-cli-app-version": "^3.2.0",
     "ember-cli-babel": "^7.1.2",
@@ -33,6 +35,8 @@
     "ember-cli-sri": "^2.1.1",
     "ember-cli-template-lint": "^1.0.0-beta.1",
     "ember-cli-uglify": "^2.1.0",
+    "ember-code-snippet": "^2.4.0",
+    "ember-concurrency": "^0.10.1",
     "ember-data": "~3.9.0",
     "ember-export-application-global": "^2.0.0",
     "ember-load-initializers": "^1.1.0",
@@ -41,8 +45,13 @@
     "ember-resolver": "^5.0.1",
     "ember-source": "~3.9.0",
     "eslint-plugin-ember": "^5.2.0",
+    "express": "^4.8.5",
+    "glob": "^4.0.5",
+    "hack": "^0.8.1",
     "loader.js": "^4.7.0",
-    "qunit-dom": "^0.8.0"
+    "morgan": "^1.3.2",
+    "qunit-dom": "^0.8.0",
+    "urijs": "^1.19.1"
   },
   "engines": {
     "node": "6.* || 8.* || >= 10.*"

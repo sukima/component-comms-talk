@@ -1,0 +1,29 @@
+<h1>Big Number Style Manager</h1>
+
+{{! BEGIN-SNIPPET big-number-style-manager }}
+<h2>Without a style manager</h2>
+
+<div class="flexbox">
+
+  {{#each this.numbers as |number|}}
+    <BigNumber @number={{number}} />
+  {{/each}}
+
+</div>
+
+<h2>With a style manager</h2>
+
+<BigNumberStyleManager as |manager|>
+
+  <div class="flexbox">
+
+    {{#each this.numbers as |number|}}
+      <manager.big-number @number={{number}} />
+    {{/each}}
+
+  </div>
+
+</BigNumberStyleManager>
+{{! END-SNIPPET }}
+
+<CodeSnippet @name="big-number-style-manager.hbs" />
