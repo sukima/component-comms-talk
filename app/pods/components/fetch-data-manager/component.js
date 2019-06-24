@@ -5,7 +5,7 @@ import URI from 'urijs';
 export default Component.extend({
   tagName: '',
   autoLoadOnInsert: true,
-  attepts: 0,
+  attepts: 1,
 
   fetchTask: task(function * () {
     let url = new URI(this.url).addQuery('cache-bust', this.attepts++);
