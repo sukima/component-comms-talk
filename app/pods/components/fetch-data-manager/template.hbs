@@ -1,8 +1,0 @@
-{{yield
-  (hash
-    isLoading=this.fetchTask.isRunning
-    error=this.fetchTask.last.error
-    refresh=(perform this.fetchTask)
-  )
-  this.fetchTask.last.value
-}}
