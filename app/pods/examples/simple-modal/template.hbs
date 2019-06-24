@@ -1,0 +1,41 @@
+<h1>Simple Modal</h1>
+
+<div class="modal-result">
+  Modal Result: <strong>{{this.result}}</strong>
+</div>
+
+<div>
+  {{! BEGIN-SNIPPET simple-modal-use }}
+  <button class="btn btn-default" {{action "openModal" this.modalManager}}>
+    Open Modal
+  </button>
+
+  <BasicModal
+    @registerModalManager={{action (mut this.modalManager)}}
+    as |modal|
+  >
+
+    <modal.header>
+      <h2>Simple Modal Example</h2>
+    </modal.header>
+
+    <modal.content>
+      <p>Adipisicing repudiandae dolor suscipit sunt placeat Nemo commodi quibusdam non molestiae at iste, dolore tempora. Quod dolor repellendus iure voluptate autem exercitationem. A consequuntur perspiciatis quia maxime mollitia. Consequatur eum</p>
+    </modal.content>
+
+    <modal.footer>
+      <button class="btn btn-default" {{action modal.resolve "cancel"}}>
+        Cancel
+      </button>
+
+      <button class="btn btn-primary" {{action modal.resolve "confirm"}}>
+        Confirm
+      </button>
+    </modal.footer>
+
+  </BasicModal>
+  {{! END-SNIPPET }}
+</div>
+
+<CodeSnippet @name="simple-modal-use.hbs" />
+<CodeSnippet @name="simple-modal-use.js" />

@@ -1,0 +1,21 @@
+<h1>Data Massage</h1>
+
+{{! BEGIN-SNIPPET data-massage }}
+<ListSplitter @maxGroupSize={{3}} @items={{this.items}} as |columns|>
+  <div class="example-columns">
+    {{#each columns as |column|}}
+      <ul class="example-column">
+        {{#each column as |item|}}
+          <li>{{item.name}}</li>
+        {{/each}}
+      </ul>
+    {{else}}
+      <div class="example-column centered">
+        No items yet.
+      </div>
+    {{/each}}
+  </div>
+</ListSplitter>
+{{! END-SNIPPET }}
+
+<CodeSnippet @name="data-massage.hbs" />
